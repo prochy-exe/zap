@@ -27,6 +27,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"sync"
 
@@ -144,7 +145,10 @@ func (sr *sinkRegistry) newFileSinkFromURL(u *url.URL) (Sink, error) {
 	if hn := u.Hostname(); hn != "" && hn != "localhost" {
 		return nil, fmt.Errorf("file URLs must leave host empty or use localhost: got %v", u)
 	}
-
+	// Remove leading slash from Windows paths, as they're not absolute URLs.
+	if runtime.GOOS == "windows" && u.Path[0] == '/' && u.Path[2] == ':' {
+		return os.OpenFile(u.Path[1:], os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
+	}
 	return sr.newFileSinkFromPath(u.Path)
 }
 
