@@ -26,11 +26,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/prochy-exe/zap/internal/ztest"
 	"github.com/stretchr/testify/assert"
-	"go.uber.org/zap/internal/ztest"
 
 	//revive:disable:dot-imports
-	. "go.uber.org/zap/zapcore"
+	. "github.com/prochy-exe/zap/zapcore"
 )
 
 var counterTestCases = [][]string{

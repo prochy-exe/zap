@@ -21,8 +21,8 @@
 package zap
 
 import (
-	"go.uber.org/zap/internal/pool"
-	"go.uber.org/zap/zapcore"
+	"github.com/prochy-exe/zap/internal/pool"
+	"github.com/prochy-exe/zap/zapcore"
 )
 
 var _errArrayElemPool = pool.New(func() *errArrayElem {

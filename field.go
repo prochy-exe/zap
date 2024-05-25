@@ -25,8 +25,8 @@ import (
 	"math"
 	"time"
 
-	"go.uber.org/zap/internal/stacktrace"
-	"go.uber.org/zap/zapcore"
+	"github.com/prochy-exe/zap/internal/stacktrace"
+	"github.com/prochy-exe/zap/zapcore"
 )
 
 // Field is an alias for Field. Aliasing this type dramatically

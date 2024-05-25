@@ -25,10 +25,10 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/prochy-exe/zap"
+	"github.com/prochy-exe/zap/internal/ztest"
+	"github.com/prochy-exe/zap/zapcore"
 	"go.uber.org/multierr"
-	"go.uber.org/zap"
-	"go.uber.org/zap/internal/ztest"
-	"go.uber.org/zap/zapcore"
 )
 
 var (

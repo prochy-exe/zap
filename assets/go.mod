@@ -1,3 +1,3 @@
-module go.uber.org/zap/assets
+module github.com/prochy-exe/zap/assets
 
 go 1.21.5

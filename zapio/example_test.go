@@ -24,8 +24,8 @@ import (
 	"io"
 	"log"
 
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapio"
+	"github.com/prochy-exe/zap"
+	"github.com/prochy-exe/zap/zapio"
 )
 
 func ExampleWriter() {
